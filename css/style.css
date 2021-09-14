@@ -5,7 +5,7 @@ body{
     margin: 0;
 }
 .container{
-    padding: 70px 0;
+    padding: 10vh 0 10vh 0;
 }
 p, li{
     color: #fff;
@@ -61,7 +61,11 @@ header, .navbar{
 .container-fluid{
     padding: 0;
 }
-#mainSlider .carousel-inner, #mainSlider .carousel-item{
+img{
+    max-height: 980px;
+}
+
+/*#mainSlider .carousel-inner, #mainSlider .carousel-item{
     height: 100vh;
 }
 #mainSlider .carousel-caption{
@@ -69,77 +73,68 @@ header, .navbar{
 }
 .carousel-indicators .active{
     background-color: #e11c1c;
-}
+}*/
+
 /* Sobre nós */
 #about-area{
-    background-color: #fff;
-    margin-top: 10vh;
+    text-align: center;
+    padding-bottom: 5vh;
+    margin-bottom: 67px;
 }
 .img-fluid{
-    border-image: 10px solid #000;
-    width: 320px;
-    height: 320px;
-    position: absolute;
-    overflow: hidden;
-    margin-left: 8%;
+    width: 350px;
+    height: 350px;
 }
 p{
-    font-size: 2.8vh;
+    font-size: 2.3vh;
     color: #000;
     text-align: justify;
 }
 .main-title{
     color:#000;
-    margin: 0 0 65px 0;
-    font-size: 8vh;
+    ;
+    padding: 5vh 0 5vh 0;
+    font-size: 6vh;
     text-align: center;
     padding-top: 10vh;
-}
-.main-title::after{
-    content: "";
-    border-top: 2px solid #333;
-    width: 15%;
-    position: absolute;
-    top: 60px;
-    left: 42.5%;
-}
-.about-title{
-    font-size: 17px;
-    color: #333;
     text-transform: uppercase;
     font-weight: bold;
+    
+}
+#img-quemsomos{
+    align-items: center;
 }
 #about-list{
     list-style: none;
     padding-left: 0;
 }
-#about-list li{
-    line-height: 30px;
-    color: #e11c1c;
-}
+
 #about-list i{
     color:#000;
     margin-right: 20px;
     font-size: 2.4vh;
+    text-transform: uppercase;
+    margin-top: 5px;
+       
+}
+#about-list i::before{
+    color:#000;
+    margin-right: 20px;
+    font-size: 2.4vh;
+    color: #e11c1c;
 }
 
 /*Serviços*/
 
-.service-box{
-    text-align: center;
-    margin-bottom: 50px;
+#about-service{
+    margin-top: 5vh;
 }
-.service-box i, .service-box h4{
-    transition: .5s;
-}
-.service-box i{
-    font-size: 36px;
-    margin-bottom: 20px;
-    color: #444;
-}
+
 .service-box h4{
     font-size: 24px;
     margin-bottom: 20px;
+    color: #444;
+    transition: .5s;
 }
 .service-box:hover > i, .service-box:hover > h4{
     color: #e11c1c;
@@ -147,14 +142,16 @@ p{
 }
 .img-service{
     border-image: 10px solid #000;
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
 }
 /*Fale conosco - footer*/
 
 #contact-area{
     text-align: center;
+    padding-bottom: 10vh;
 }
+
 .contact-box{
     padding-bottom: 50px;
     margin-bottom: 50px;
@@ -224,58 +221,153 @@ p{
     text-align: center;
     font-size: 2vh;
 }
+/*WhatsApp*/
+.whatsapp {
+    position: fixed;
+    top: 80%;
+    right: 1%;
+    padding: 10px;
+    z-index: 10000000;
+}
 
 /*Responsive*/
 
 @media(max-width: 768px){
-    /*geral*/
+    .navbar{
+        height: 100px;
+    }
+    #cs{
+        width: 30vh;
+        margin-top: 2vh;
+        margin-left: 50%;   
+    }
+    .d-block{
+        padding: 0;
+        height: 450px;
+    }
     .container{
-        padding: 20px 0;
+        padding: 0;
+        margin: 0;
     }
-    /*slider*/
-    #mainSlider .carousel-inner, #mainSlider .carousel-item{
-        height: auto;
+    .img-fluid{
+        min-width: 100px;
     }
-    #mainSlider .carousel-caption h2{
-        font-size: 28px;
+    .main-title{
+        font-size: 30px;
+        padding: 8vh 0 3vh 0;
+        margin: 0 0 0 0;
     }
-    #mainSlider .carousel-caption p{
+    #about-area{
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    #about-area .img-fluid{
+        width: 200px;
+        height: 200px;
+    }
+    #about-area p{
+        text-align: justify;
+        font-size: 14px;  
+    }
+    p, li{
+        color: #000000;
+        font-size: 15px;
+    }
+    #about-list i{
+        color:#000;
+        margin-right: 20px;
+        font-size: 14px;
+        text-transform: uppercase;
+        margin-top: 5px;
+           
+    }
+    .service-box{
+        text-align: center;
+    }
+    .service-box h4{
         font-size: 18px;
-        margin-bottom: 10%;
+        margin-bottom: 20px;
+        color: #444;
+        transition: .5s;
     }
-    .carousel-caption{
-        left: 10%;
-        right: 10%;
+    .img-service{
+        width: 150px;
+        height: 150px;
+        padding: 0 0 0 0;
+        margin: 0 0 10vh 0;
     }
-    /*About*/
-    #about-area img{
-        margin-top: 100px;
+    #contact-form .main-btn{
+        width: 120px;
+        height: 50px;
+       
+    }
+    #copy-text{
+        text-align: center;
+        font-size: 1.5vh;
     }
 }
 @media(max-width: 425px){
-    /*slider*/
-    #mainSlider{
-        margin-top: 90px;
+   
+    .navbar{
+        height: 80px;
     }
-    #mainSlider .carousel-caption{
-        top: 5%;
+    #cs{
+        width: 30vh;
+        margin-top: 2vh;
+        margin-left: 50%;   
     }
-    #mainSlider .carousel-caption h2{
-        font-size: 18px;
-        margin-bottom: 40px;
+    .d-block{
+        padding: 0;
+        height: 320px;
     }
-    #mainSlider .carousel-caption p{
-        display: none;
+    .container{
+        padding: 0;
+        margin: 0;
     }
-    .carousel-caption .main-btn{
-        font-size: 14px;
+    .img-fluid{
+        min-width: 100px;
     }
-    /*About*/
     .main-title{
-        font-size: 30px;
+        font-size: 20px;
+        padding: 8vh 0 3vh 0;
+        margin: 0 0 0 0;
     }
-    #about-area img{
-        margin-top: 0;
-        margin-bottom: 30px;
+    #about-area{
+        text-align: center;
+        padding: 0;
+        margin: 0;
+    }
+    #about-area .img-fluid{
+       display: none;
+    }
+    #about-area p{
+        margin: 0 10px 0 10px;
+        text-align: justify;
+        font-size: 14px;  
+    }
+    p, li{
+        color: #000000;
+        font-size: 15px;
+    }
+    .service-box{
+        text-align: center;
+    }
+    .service-box h4{
+        font-size: 14px;
+        margin-bottom: 20px;
+        color: #444;
+        transition: .5s;
+    }
+    .img-service{
+        width: 150px;
+        height: 150px;
+        padding: 0 0 0 0;
+        margin: 0 0 10vh 0;
+    }
+    #contact-form .main-btn{
+        width: 120px;
+        height: 50px;
+       
     }
 }
